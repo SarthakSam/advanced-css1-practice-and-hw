@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+:root {
+    --primary-color: rgb(51, 134, 235); 
+    --primary-font: 0.7rem;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    padding: 0 0.5em;
+    display: grid;
+    grid-template-rows: 50px 150px 100px 150px 10px 150px 100px;
+    grid-template-columns: 1em 1fr 1fr 1fr 1fr 1em;
+    grid-gap: 30px;
+    grid-template-areas: "nav nav nav nav nav nav"
+                         ". page-heading page-heading page-header-image page-header-image ."
+                         ". course-info-block course-info-block course-info-block course-info-block ."
+                         ". time-and-level    about-course      about-course      about-course      ."
+                         ". hr-block hr-block hr-block hr-block ."
+                         ". who-will-benefit-block who-will-benefit-block who-will-benefit-block who-will-benefit-block ."
+                         "footer footer footer footer footer footer";
+                         /* "footer footer footer footer footer footer"; */
+
+}
+
+
+nav {
+    grid-area: nav;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.page-heading {
+    grid-area: page-heading;
+}
+
+.page-header-image {
+    grid-area: page-header-image;
+    /* background: green; */
+}
+
+.course-info-block {
+    grid-area: course-info-block;
+    /* background: chartreuse; */
+}
+
+.time-and-level {
+    grid-area: time-and-level;
+    background-color: var(--primary-color);
+    font-size: var(--primary-font);
+    padding: 10px;
+}
+
+.about-course-block {
+    grid-area: about-course;
+    font-size: var(--primary-font);
+    /* background: red; */
+}
+
+.who-will-benefit-block {
+    grid-area: who-will-benefit-block;
+    /* background: green; */
+}
+
+.hr-block {
+    grid-area: hr-block;
+    /* background-color: purple; */
+}
+
+footer {
+    grid-area: footer;
+    background: rgb(40, 3, 96);
+}
+
+.title {
+    margin: 15px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.list > li {
+    margin: 0 10px;
+
+}
+
+.tag-line1, .tag-line2 {
+    font-size: var(--primary-font);
+}
+
+.tag-line1 {
+    color: orange;
+}
+
+.page-header-image {
+   background: url('https://thumbs.dreamstime.com/t/cartoon-rocket-ship-flying-up-white-background-isolated-flat-animation-120293018.jpg');
+   background-repeat: no-repeat;
+}
+
+.course-info-block {
+    display: flex;
+    border-radius: 10px;
+}
+
+.course-info-block > div {
+    background-color: rgb(218, 206, 206);
+    padding: 10px;
+    width: -webkit-fill-available;
+    border-right: 0.5px solid black
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: var(--primary-font);
+}
+
+.horizontal-card > img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.horizontal-card > p {
+    width: 50%;
+}
+
+footer {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding-top: 20px;
+}

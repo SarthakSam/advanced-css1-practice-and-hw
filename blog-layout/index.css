@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "large-card-img large-card-img large-card-info"
+                         "card card card"
+                         "medium-card medium-card medium-card";
+    grid-template-rows: 200px;
+    grid-gap: 1em;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.large-card-img {
+    grid-area: large-card-img;
+    background: red;
+    border: 1px solid black;
+}
+
+.large-card-info {
+    grid-area: large-card-info;
+    background-color: pink;
+}
+
+.card {
+    grid-area: card;
+    /* background: lawngreen; */
+    border: 1px solid black;
+}
+
+.medium-card {
+    grid-area: medium-card;
+    background: blue;
+    border: 1px solid black;
+}
